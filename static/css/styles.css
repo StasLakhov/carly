@@ -1,0 +1,365 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7; /* Light Gray Background */
+    color: #333; /* Dark text for readability */
+}
+
+/* Header Styling */
+header {
+    background-color: #2d3e50; /* Deep Gray/Blue */
+    color: white;
+    padding: 20px 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+/* Cards Container */
+.card-container {
+    display: flex; /* Align cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap if necessary */
+    gap: 4px; /* Space between cards */
+    /*justify-content: flex-start; Align cards to the left */
+    justify-content: center;
+    padding: 0px; /* Padding for the container */
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 235px; /* Fixed width for cards */
+    padding: 0px; /* Internal padding */
+    text-align: center; /* Center the text inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Card Header */
+.card-header {
+    background-color: #5C6D7C; /* Deep Gray/Blue */ /*#6F7F8E #5C6D7C*/
+    color: white;
+    font-weight: bold;
+    padding: 8px 0px; /* Padding for the header */
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+    width: 100%; /* Full-width header */
+    text-align: center; /* Center the header text */
+    font-size: 1rem; /* Larger font size for better emphasis */
+    margin-bottom: 5px; /* Space below the header */
+}
+
+/* Card Body */
+.card-body {
+    padding: 0px; /* Internal padding */
+    font-size: 1rem; /* Default font size */
+    color: #444; /* Slightly darker text for readability */
+    flex-grow: 1; /* Allow the body to grow and take remaining space */
+    line-height: 2; /* Better line spacing for readability */
+    text-align: center; /* Center text inside body */
+}
+
+/* Adding hover effect for card content */
+.card-body:hover {
+    color: #2d3e50; /* Change text color on hover */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Table Styling */
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #2d3e50; /* Deep Gray/Blue */
+    color: white;
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Soft Gray */
+}
+
+.table tbody tr:hover {
+    background-color: #e6e6e6; /* Hover effect for row */
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    background-color: #1d7c88; /* Muted Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #175f65; /* Darker Green */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Form and input styles */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #2d3e50; /* Deep Gray/Blue */
+    outline: none;
+}
+
+/* Form and Input fields in modal */
+form {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f7f7f7;
+    font-size: 14px;
+    color: #888;
+}
+
+th {
+    cursor: pointer;
+    position: relative;
+}
+
+th.ascending::after {
+    content: '▲';
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+}
+
+th.descending::after {
+    content: '▼';
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+}
+
+/* Modal Background */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto; /* Allow scrolling for long content */
+}
+
+/* Modal Content */
+.popup-content {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 70%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative; /* To position the close button */
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Header */
+.popup-content h2 {
+    margin: 0 3 20px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Spacing between rows */
+}
+
+/* Form Group for Two Lines */
+.form-group {
+    flex: 1 1 48%; /* Adjusts width to fit two inputs per row */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Styling */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 0px;
+    margin-top: 5px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #007bff;
+}
+
+/* Textarea */
+form textarea {
+    resize: vertical;
+}
+
+/* Form Actions */
+.form-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-actions button:hover {
+    background-color: #f0f0f0;
+}
+
+.secondary-btn {
+    background-color: #eee;
+    color: #555;
+}
+
+.secondary-btn:hover {
+    background-color: #ddd;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-add-car {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #28a745; /* Flat green */
+    color: white;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-car:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-add-car:focus {
+    outline: none;
+}
+
+#edit_state {
+    height: 36px; /* Reduced height */
+    font-size: 14px; /* Smaller font size */
+    padding: 4px 8px; /* Adjust padding for better appearance */
+    border-radius: 4px; /* Slightly rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#state {
+    height: 36px; /* Reduced height */
+    font-size: 14px; /* Smaller font size */
+    padding: 4px 8px; /* Adjust padding for better appearance */
+    border-radius: 4px; /* Slightly rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-label {
+    font-weight: bold;
+}
