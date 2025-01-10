@@ -12,15 +12,15 @@ USER_CREDENTIALS = {"admin": "password"}
 
 class Car(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    vin = db.Column(db.String(20))
-    make = db.Column(db.String(50))
-    model = db.Column(db.String(50))
-    year = db.Column(db.Integer)
-    auction = db.Column(db.String(50))
-    buy_price = db.Column(db.Float)
-    delivery = db.Column(db.Float)
-    american_fee = db.Column(db.Float)
-    buy_date = db.Column(db.Date)
+    vin = db.Column(db.String(20), nullable=False)
+    make = db.Column(db.String(50), nullable=False)
+    model = db.Column(db.String(50), nullable=False)
+    year = db.Column(db.Integer, nullable=False)
+    auction = db.Column(db.String(50), nullable=False)
+    buy_price = db.Column(db.Float, nullable=False)
+    delivery = db.Column(db.Float, nullable=False)
+    american_fee = db.Column(db.Float, nullable=False)
+    buy_date = db.Column(db.Date, nullable=False)
 
 
 class Transaction(db.Model):

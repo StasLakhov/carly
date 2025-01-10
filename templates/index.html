@@ -89,7 +89,6 @@
                             <td>{{ car.delivery }}</td>
                             <td>{{ car.american_fee }}</td>
                             <td>{{ car.buy_price +  car.delivery + car.american_fee}}</td>
-    <!--                        <td>{{ car.buy_date }}</td>-->
                             <td>{{ car.buy_date.strftime('%d-%m-%Y') }}</td>
 
                             <td>
@@ -135,19 +134,19 @@
                             </div>
                             <div class="mb-3">
                                 <label for="buy_price" class="form-label">Ціна з Аукціоном</label>
-                                <input type="number" class="form-control" id="buy_price" name="buy_price">
+                                <input type="number" class="form-control" id="buy_price" name="buy_price" required>
                             </div>
                             <div class="mb-3">
                                 <label for="delivery" class="form-label">Ціна Доставки</label>
-                                <input type="number" class="form-control" id="delivery" name="delivery">
+                                <input type="number" class="form-control" id="delivery" name="delivery" required>
                             </div>
                             <div class="mb-3">
                                 <label for="american_fee" class="form-label">Американець</label>
-                                <input type="number" class="form-control" id="american_fee" name="american_fee">
+                                <input type="number" class="form-control" id="american_fee" name="american_fee" required>
                             </div>
                             <div class="mb-3">
                                 <label for="buy_date" class="form-label">Дата Купівлі</label>
-                                <input type="date" class="form-control" id="buy_date" name="buy_date">
+                                <input type="date" class="form-control" id="buy_date" name="buy_date" required>
                             </div>
                             <button type="submit" class="btn btn-success">Зберегти</button>
                         </form>
@@ -188,19 +187,19 @@
                             </div>
                             <div class="mb-3">
                                 <label for="edit_buy_price" class="form-label">Ціна з Аукціоном</label>
-                                <input type="number" class="form-control" id="edit_buy_price" name="buy_price">
+                                <input type="number" class="form-control" id="edit_buy_price" name="buy_price" required>
                             </div>
                             <div class="mb-3">
                                 <label for="edit_delivery" class="form-label">Ціна Доставки</label>
-                                <input type="number" class="form-control" id="edit_delivery" name="delivery">
+                                <input type="number" class="form-control" id="edit_delivery" name="delivery" required>
                             </div>
                             <div class="mb-3">
                                 <label for="edit_american_fee" class="form-label">Американець</label>
-                                <input type="number" class="form-control" id="edit_american_fee" name="american_fee">
+                                <input type="number" class="form-control" id="edit_american_fee" name="american_fee" required>
                             </div>
                             <div class="mb-3">
                                 <label for="edit_buy_date" class="form-label">Дата Купівлі</label>
-                                <input type="date" class="form-control" id="edit_buy_date" name="buy_date">
+                                <input type="date" class="form-control" id="edit_buy_date" name="buy_date" required>
                             </div>
                             <button type="submit" class="btn btn-success">Зберегти</button>
                         </form>
